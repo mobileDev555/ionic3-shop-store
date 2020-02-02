@@ -1,0 +1,24 @@
+<div class="wdw-footer">
+    <div class="footer-item" [ngClass]="{'footer-item-sel':selectedIndex==0}" (tap)="tabClick(0)">
+        <div class="footer-item-img">
+            <img src="assets/imgs/home.png" />
+        </div>
+    </div>
+    <div class="footer-item" [ngClass]="{'footer-item-sel':selectedIndex==1}" (tap)="tabClick(1)">
+        <div class="footer-item-img">
+            <img src="assets/imgs/payment.png" />
+        </div>
+    </div>
+    <div class="footer-item" [ngClass]="{'footer-item-sel':selectedIndex==2}" (tap)="tabClick(2)">
+        <div class="footer-item-img">
+            <img src="assets/imgs/settings.png" />
+        </div>
+    </div>
+    <div class="footer-item" (tap)="tabClick(3)">
+        <div class="footer-item-img">
+            <img src="assets/imgs/share_global.png" />
+        </div>
+    </div>
+    
+    <div class="clearfix"></div>
+</div>

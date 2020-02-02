@@ -1,0 +1,50 @@
+<!--<ion-header class="gradient-header">
+    <div class="left-icon-container" (tap)="navCtrl.pop()">
+        <div class="left-icon">
+            <ion-icon name="md-arrow-back"></ion-icon>
+        </div>
+    </div>
+    <div class="screen-title">
+        Edit Profile
+    </div>
+</ion-header>-->
+<ion-content no-padding class="smoke-screen">
+    <div class="top-x-container" (tap)="navCtrl.pop()">
+        <ion-icon name="md-close"></ion-icon>
+    </div>
+    <div class="top-title-container">
+        EDIT PROFILE
+    </div>
+    <div class="top-logo-container">
+        <img src="assets/imgs/top_logo_diagonal.jpg" />
+    </div>
+    <div class="complete-container">
+        <div class="pin-info-container">
+            <div class="profile-image-container" (click)="profilePicClick()">
+                <img [src]="sanitize(profileImageUrl)" />
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="all-fields-container">
+            <div class="signup-input-container">
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="text" maxlength="100" [(ngModel)]="user.name" placeholder="Name"></ion-input>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="email" maxlength="255" [(ngModel)]="user.email" placeholder="Email"></ion-input>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="password" maxlength="15" [(ngModel)]="user.new_password" placeholder="New Password"></ion-input>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="password" maxlength="15" [(ngModel)]="user.c_new_password" placeholder="Confirm New Password"></ion-input>
+                </ion-item>
+            </div>
+        </div>
+        <div class="next-btn-container">
+            <div class="common-button-new update-button" (tap)="updateClick()">
+                <div class="button-text">UPDATE</div>
+            </div>
+        </div>
+    </div>
+</ion-content>

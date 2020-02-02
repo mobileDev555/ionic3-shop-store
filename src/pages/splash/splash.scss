@@ -1,0 +1,92 @@
+page-splash {
+    .splash-container {
+        width: 100%;
+        height: 100%;
+        background-color:#000000;
+        text-align: center;
+        position: relative;
+        padding-top: 30px;
+    }
+
+    .splash-container .smoke-img {
+        height: 90%;
+    }
+
+    .splash-container .black-logo-container {
+        position: absolute;
+        left: 20px;
+        top: 30px;
+        //width: 130px;
+        width: 24%;
+    }
+
+    .splash-container .black-logo-container img {
+        width: 100%;
+    }
+
+
+    .input-section {
+        position: absolute;
+        bottom: 70px;
+        width: 100%;
+        z-index: 2;
+    }
+
+    .input-section .controls-container {
+        width: 250px;
+        margin: auto;
+    }
+
+    .input-section .controls-container .input-container {
+        margin: auto;
+    }
+
+    .input-section .search-button {
+        margin-top: 10px;
+    }
+
+    .input-section .search-text-container {
+        text-align: center;
+        margin-top: 20px;
+        color:rgba(255,255,255,0.75);
+        font-size: 1.75rem;
+    }
+
+    .input-section .forgot-password-container {
+        text-align: right;
+        padding-right: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+        color:rgba(255,255,255,0.75);
+        font-size: 1.4rem;
+    }
+
+    .action-section {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        width: 100%;
+        height: 50px;
+        z-index: 2;
+        color:rgba(255,255,255,0.5);
+    }
+
+    .action-button {
+        width: 50%;
+        float:left;
+    }
+
+    .action-button-L {
+        border-right-color:#FFFFFF;
+        border-right-width: 2px;
+        border-right-style: solid;
+    }
+
+    .action-button .common-button {
+        width: 100% !important;
+    }
+
+    .action-button .common-button .button-text {
+        color:rgba(255,255,255,0.5);
+    }
+}

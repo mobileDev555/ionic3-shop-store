@@ -1,0 +1,26 @@
+page-home-tab {
+
+    .tab-button {
+        background-color: #FFFFFF;//color($colors,tab-color);
+        color:#FFFFFF;
+        min-height: 40px;
+        height: 40px;
+    }
+    
+    .tabs-md[tabsHighlight=true] .tab-highlight {
+        color:#ff0000;
+        background:#00b7d9;
+        height: 4px;
+        z-index: 99999999 !important;
+    }
+    .tabs-ios[tabsHighlight=true] .tab-highlight {
+        color:#ff0000;
+        background:#00b7d9;
+        height: 4px;
+        z-index: 99999999 !important;
+    }
+
+    .tabs-md .tab-button[aria-selected=true] {
+        color:#00b7d9;
+    }
+}

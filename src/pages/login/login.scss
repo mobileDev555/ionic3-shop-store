@@ -1,0 +1,74 @@
+page-login {
+    .top-logo-container {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 85%;
+    }
+
+    .top-logo-container img{
+        width: 100%;
+    }
+
+    .smoke-container {
+        position: fixed;
+        right: 10px;
+        top: 50px;
+        height: calc(98% - 50px);
+        z-index: 1;
+    }
+
+    .smoke-container img {
+        width: 150px;
+        height: 100%;
+    }
+
+    .input-section {
+        padding-bottom: 15px;
+        margin-top: 70%;
+        z-index: 2;
+        position: relative;
+    }
+
+    .signup-input-container {
+        width: 250px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    .signup-input-container .input-container {
+        border-width: 1px;
+        border-color:#9a9a9a;
+        border-style: solid;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .signup-input-container2 {
+        margin-top: 25px;
+    }
+
+    .input-section .controls-container {
+        width: 250px;
+        margin: auto;
+    }
+
+    .input-section .controls-container .input-container {
+        margin: auto;
+    }
+
+    .input-section .login-button {
+        margin-top: 50px;
+    }
+
+    .input-section .signup-button {
+        margin-top: 10px;
+    }
+
+    .input-section .forgot-password-container {
+        text-align: right;
+        padding-right: 30px;
+        margin-top: 20px;
+    }
+}

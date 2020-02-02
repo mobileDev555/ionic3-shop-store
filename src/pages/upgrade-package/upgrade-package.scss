@@ -1,0 +1,101 @@
+page-upgrade-package {
+    .top-logo-container {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 85%;
+    }
+
+    .top-logo-container img{
+        width: 100%;
+    }
+
+    .smoke-container {
+        position: fixed;
+        right: 10px;
+        top: 50px;
+        height: calc(98% - 50px);
+        z-index: 1;
+    }
+
+    .smoke-container img {
+        width: 150px;
+        height: 100%;
+    }
+
+    .all-packages-container {
+        position: relative;
+        width: 80%;
+        z-index: 2;
+        margin: auto;
+        margin-top: 35%;
+        padding-bottom: 20px;
+    }
+
+    /*.all-packages-container .single-package {
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        box-shadow: 2px 2px 4px 0px #555;
+        color:#FFFFFF;
+        text-align: center;
+    }*/
+
+    .all-packages-container .single-package {
+        padding-top: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border-style:solid;
+        border-color:#00b7d9;
+        //border-color: linear-gradient(to right, #00b7d9 , #00df9c);
+        border-width: 1px;
+        //box-shadow: 2px 2px 4px 0px #555;
+        color:#000000;
+        text-align: center;
+        margin: auto;
+        margin-top: 15px;
+    }
+
+    .all-packages-container .single-package:hover {
+        background: linear-gradient(to right, #00b7d9 , #00df9c);
+    }
+
+    .all-packages-container .single-package:active {
+        background: linear-gradient(to right, #00b7d9 , #00df9c);
+    }
+
+    .single-package .package-name {
+        font-size: 1.9rem;
+        font-weight: 500;
+        margin-top: 10px;
+    }
+
+    .single-package .package-price {
+        font-size: 1.9rem;
+        font-weight: 400;
+        //color:color($colors,primary);
+        color:#575757;
+        margin-top: 10px;
+    }
+
+    .single-package .package-images {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .single-package .package-videos {
+        margin-top: 10px;
+        font-size: 1.5rem;
+        font-weight: 400;
+    }
+
+    .single-package .package-action-buttons {
+        margin-top: 10px;
+        text-align: center;
+    }
+}

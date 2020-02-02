@@ -1,0 +1,53 @@
+<ion-content no-padding class="smoke-screen">
+    <div class="top-x-container" (tap)="closeMe()">
+        <ion-icon name="md-close"></ion-icon>
+    </div>
+    <div class="top-logo-container">
+        <img src="assets/imgs/top_logo_diagonal.jpg" />
+    </div>
+    <!--<div class="smoke-container">
+        <img src="assets/imgs/smoke_on_white.jpg" />
+    </div>-->
+
+    <div class="input-section">
+        <div class="profile-pic-container" (click)="profilePicClick()">
+            <div class="add-icon" *ngIf="imageUrl==''">
+                <ion-icon name="add"></ion-icon>
+            </div>
+            <div class="upload-text" *ngIf="profileImageUrl==''">
+                Upload Profile Photo
+            </div>
+            <div class="upload-photo" *ngIf="profileImageUrl!=''">
+                <img [src]="sanitize(profileImageUrl)" />
+            </div>
+        </div>
+        <div class="signup-input-container">
+            <ion-item class="input-container">
+                <ion-input type="text" [(ngModel)]="loginData.name" maxlength="50" placeholder="Name"></ion-input>
+            </ion-item>
+            <ion-item class="input-container">
+                <ion-input type="email" [(ngModel)]="loginData.email" maxlength="255" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item class="input-container">
+                <ion-input type="password" [(ngModel)]="loginData.password" maxlength="16" placeholder="Password"></ion-input>
+            </ion-item>
+            <ion-item class="input-container">
+                <ion-input type="password" [(ngModel)]="loginData.cpassword" maxlength="16" placeholder="Confirm Password"></ion-input>
+            </ion-item>
+            <div class="chk">
+                <ion-checkbox mode="ios" slot="end"></ion-checkbox>
+            </div>
+            <div class="chk-label">
+                I accept the terms of use and privacy policy
+            </div>
+            <div class="clearfix"></div>
+            <div class="read-terms" (tap)="openTermsAgreement()">
+                Please read the Terms here
+            </div>
+            <div class="common-button-new signup-button" (tap)="signupClick()">
+                <div class="button-text">CREATE ACCOUNT</div>
+            </div>
+        </div>
+    </div>
+
+</ion-content>

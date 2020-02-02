@@ -1,0 +1,143 @@
+page-add-payment {
+    .top-logo-container {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 85%;
+    }
+
+    .top-logo-container img{
+        width: 100%;
+    }
+
+    .smoke-container {
+        position: fixed;
+        right: 10px;
+        top: 50px;
+        height: calc(98% - 50px);
+        z-index: 1;
+    }
+
+    .smoke-container img {
+        width: 150px;
+        height: 100%;
+    }
+
+    .complete-container {
+        position: relative;
+        width: 100%;
+        z-index: 2;
+        margin-top: 25%;
+    }
+
+    .card-image-container {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .card-image-container img {
+        width: 170px;
+    }
+
+    .all-fields-container {
+        padding-bottom: 15px;
+        margin-top: 40px;
+        position: relative;
+    }
+
+    .signup-input-container {
+        width: 250px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    .signup-input-container .input-container {
+        border-width: 1px;
+        border-color:#9a9a9a;
+        border-style: solid;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .signup-input-container2 {
+        margin-top: 25px;
+    }
+
+    .next-btn-container {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        position: relative;
+    }
+
+    .next-btn-container .update-button {
+        margin: auto;
+    }
+
+    .paypal-btn-container {
+        position: relative;
+        width: 250px;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+
+    .paypal-btn-container .card-or {
+        position: absolute;
+        //right: 90px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 50%;
+        text-align: center;
+    }
+
+    .paypal-btn-container .card-paypal {
+        float: left;
+        margin-right: 0px;
+        width: 50%;
+        margin-left: 50%;
+    }
+
+    .card-paypal .paypal-button {
+        //width: 70px;
+        //height: 70px;
+        //border-radius: 50%;
+        width: 125px !important;
+    }
+
+    .chk {
+        float: left;
+        //background-color:#000000;
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .chk-label {
+        float: left;
+        width: calc(100% - 50px);
+        margin-left: 10px;
+        margin-top: 10px;
+    }
+
+    .chk2 {
+        float: left;
+        //background-color:#000000;
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    .chk-label2 {
+        float: left;
+        width: calc(100% - 50px);
+        margin-left: 10px;
+        margin-top: 15px;
+    }
+
+    .read-terms {
+        margin-left: 40px;
+        margin-top: 10px;
+        text-decoration: underline;
+        color:color($colors,primary);
+    }
+}

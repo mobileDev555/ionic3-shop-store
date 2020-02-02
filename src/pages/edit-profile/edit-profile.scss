@@ -1,0 +1,102 @@
+page-edit-profile {
+
+    .top-logo-container {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 1;
+        width: 85%;
+    }
+
+    .top-logo-container img{
+        width: 100%;
+    }
+
+    .complete-container {
+        position: relative;
+        margin-top: 35%;  
+    }
+
+    .complete-container .pin-info-container {
+        position: relative;
+        width: 100%;
+        color:#FFFFFF;
+        padding-top: 25px;
+        padding-bottom: 25px;
+        text-align: center;
+    }
+
+    .pin-info-container .profile-image-container {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border-color:#00b7d9;
+        border-width: 1px;
+        border-style: solid;
+        overflow: hidden;
+        margin:auto;
+    }
+
+    .profile-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;       
+        object-position: center;
+    }
+
+    .pin-info-container .profile-name {
+        margin-top: 10px;
+    }
+
+    .complete-container .how-busy-container {
+        background: linear-gradient(to right, #ff8023 , #ffc823);
+        position: relative;
+        width: 100%;
+        color:#FFFFFF;
+        font-size: 1.25rem;
+        font-weight: 400;
+        padding: 15px;
+        padding-left: 15px;
+    }
+
+    .how-busy-container .edit-interests-icon {
+        float: right;
+    }
+
+    .all-interests-container {
+        font-size: 1.25rem;
+        padding: 15px;
+    }
+
+    .all-fields-container {
+        padding-bottom: 15px;
+    }
+
+    .signup-input-container {
+        width: 250px;
+        margin: auto;
+        margin-top: 0px;
+    }
+
+    .signup-input-container .input-container {
+        border-width: 1px;
+        border-color:#9a9a9a;
+        border-style: solid;
+        border-radius: 5px;
+        margin-top: 10px;
+    }
+
+    .signup-input-container2 {
+        margin-top: 25px;
+    }
+
+    .next-btn-container {
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .next-btn-container .update-button {
+        margin: auto;
+    }
+}

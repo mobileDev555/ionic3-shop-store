@@ -1,0 +1,83 @@
+<!--<ion-header class="gradient-header">
+    <div class="left-icon-container" (tap)="viewCtrl.dismiss()">
+        <div class="left-icon">
+            <ion-icon name="md-arrow-back"></ion-icon>
+        </div>
+    </div>
+    <div class="screen-title">
+        PAYMENT
+    </div>
+</ion-header>-->
+<ion-content no-padding class="smoke-screen">
+    <div class="top-x-container">
+        <ion-icon name="md-close"></ion-icon>
+    </div>
+    <div class="top-title-container">
+        PAYMENT
+    </div>
+    <div class="top-logo-container">
+        <img src="assets/imgs/top_logo_diagonal.jpg" />
+    </div>
+    <!--<div class="smoke-container">
+        <img src="assets/imgs/smoke_on_white.jpg" />
+    </div>-->
+    <div class="complete-container">
+        <div class="card-image-container">
+            <img src="assets/imgs/credit_card.png" />
+        </div>
+        <div class="all-fields-container">
+            <div class="signup-input-container">
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="text" maxlength="255" [(ngModel)]="card.card_holder" placeholder="Cardholder Name"></ion-input>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="tel" maxlength="50" [(ngModel)]="card.card_number" placeholder="Card Number"></ion-input>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-label>Expiry Date</ion-label>
+                    <ion-datetime pickerFormat="MM/YY" displayFormat="MM/YY"></ion-datetime>
+                </ion-item>
+                <ion-item class="input-container" no-lines>
+                    <ion-input type="password" maxlength="3" [(ngModel)]="card.cvv" placeholder="Card CVV"></ion-input>
+                </ion-item>
+                <div class="chk">
+                    <ion-checkbox [(ngModel)]="card.check_terms" mode="ios" slot="end"></ion-checkbox>
+                </div>
+                <div class="chk-label">
+                    I accept the terms of use and privacy policy
+                </div>
+                <div class="clearfix"></div>
+                <div class="read-terms" (tap)="openTermsAgreement()">
+                    Please read the Terms here
+                </div>
+                <div class="chk2">
+                    <ion-checkbox [(ngModel)]="card.check_refund" mode="ios" slot="end"></ion-checkbox>
+                </div>
+                <div class="chk-label2">
+                    I accept the refund policy
+                </div>
+                <div class="clearfix"></div>
+                <div class="read-terms" (tap)="openRefundPolicy()">
+                    Please read the refund policy here
+                </div>
+            </div>
+        </div>
+        <div class="next-btn-container">
+            <div class="common-button-new update-button" (tap)="updateClick()">
+                <div class="button-text">SAVE</div>
+            </div>
+        </div>
+        <div class="paypal-btn-container">
+            <div class="card-or">OR</div>
+            <div class="card-paypal">
+                <div class="common-button-new paypal-button" (tap)="paypalClick()">
+                    <div class="button-text">PAYPAL</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer *ngIf="globals.currentUser!=null">
+    <wheredaweed-footer selected-index="1"></wheredaweed-footer>
+</ion-footer>

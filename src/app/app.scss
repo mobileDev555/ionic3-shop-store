@@ -1,0 +1,210 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+$common-font-family: 'Avenir','Open Sans';
+
+body {
+    font-family: $common-font-family !important;
+}
+
+.content {
+    font-family: $common-font-family !important;
+}
+
+.scroll-content {
+    font-family: $common-font-family !important;
+}
+
+.smoke-screen {
+    //font-family: $common-font-family !important;
+    background-color: #f6f6f6;
+}
+
+.header {
+    height: 50px;
+    position: relative;
+}
+
+.header .screen-title {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.75rem;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    color: #FFFFFF;
+    z-index: 1;
+}
+
+.header .back-arrow-container {
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: left;
+    color:#FFFFFF;
+    //background-color:#000000;
+    z-index: 20;
+}
+
+.header .back-arrow-container .back-arrow {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.75rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.header .left-icon-container {
+    position: relative;
+    width: 50px;
+    height: 100%;
+    text-align: left;
+    color:#FFFFFF;
+    z-index: 20;
+}
+
+.header .left-icon-container .left-icon {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.75rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.header .right-icon {
+    position: absolute;
+    display: inline-block;
+    font-weight: bold;
+    font-size: 1.75rem;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    transform: translateY(-50%);
+    text-align: center;
+    color:#FFFFFF;
+    z-index: 20;
+}
+
+.header .header-logo {
+    position: absolute;
+    left: 50px;
+    top: 0;
+    width: calc(100% - 100px);
+    height: 100%;
+    text-align: center;
+    //background-color:#000000;
+    padding-top: 10px;
+}
+
+.header .header-logo img {
+    height: 30px;
+}
+
+.gradient-header {
+    background: linear-gradient(to right, #00b7d9 , #00df9c);
+}
+
+.common-gradient {
+    background: linear-gradient(to right, #00b7d9 , #00df9c);
+}
+
+.common-input-container {
+    width: 220px;
+    border-bottom-color:#000000;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
+
+.common-button-new {
+    position: relative;
+    background-color: transparent;
+    border-width: 1px;
+    border-color:#00b7d9;
+    border-style:solid;
+    border-radius: 30px;
+    height: 50px;
+    width: 250px;
+}
+
+.common-button-new:hover {
+    background: linear-gradient(to right, #00b7d9 , #00df9c);
+}
+
+.common-button-new .button-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.common-button {
+    height: 50px;
+    width: 250px;
+    position: relative;
+}
+
+.common-button img {
+    height: 100%;
+    width: 100%;
+}
+
+.common-button .button-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.top-x-container {
+    float:right;
+    padding: 10px;
+    font-size: 2.4rem;
+}
+
+.top-title-container {
+    float:right;
+    padding: 0px;
+    margin-right: -25px;
+    font-size: 1.8rem;
+    font-weight: 200;
+    margin-top: 15%;
+    z-index: 3;
+    position: relative;
+}
+
+.clearfix {
+    clear: both;
+}
+
+$footer-height: 40px;
+
+.footer {
+    height: $footer-height;
+    background-color:#FFFFFF;
+}

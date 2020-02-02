@@ -1,0 +1,45 @@
+<!--<ion-header class="gradient-header">
+    <div class="left-icon-container" (tap)="navCtrl.pop()">
+        <div class="left-icon">
+            <ion-icon name="md-arrow-back"></ion-icon>
+        </div>
+    </div>
+    <div class="screen-title">
+        Packages
+    </div>
+</ion-header>-->
+<ion-content no-padding class="smoke-screen">
+    <div class="top-x-container" (tap)="navCtrl.pop()">
+        <ion-icon name="md-close"></ion-icon>
+    </div>
+    <div class="top-title-container">
+        PACKAGES
+    </div>
+    <div class="top-logo-container">
+        <img src="assets/imgs/top_logo_diagonal.jpg" />
+    </div>
+    <!--<div class="smoke-container">
+        <img src="assets/imgs/smoke_on_white.jpg" />
+    </div>-->
+    <div class="all-packages-container">
+        <div class="single-package" *ngFor="let pkg of globals.packages" (tap)="purchaseClick(pkg)">
+            <div class="package-name">
+                {{pkg.name}}
+            </div>
+            <div class="package-price">
+                ${{pkg.price}}/mo
+            </div>
+            <div class="package-images">
+                {{pkg.images}} Images
+            </div>
+            <div class="package-videos" *ngIf="pkg.videos>0">
+                {{pkg.videos}} Video(s)
+            </div>
+            <!--<div class="package-action-buttons">
+                <button ion-button small round color="secondary" [style.backgroundColor]="pkg.buttonBackColor" (tap)="purchaseClick(pkg)" *ngIf="globals.currentUser.user_package!=pkg.id">
+                    <ion-icon name="cart"></ion-icon>
+                </button>
+            </div>-->
+        </div>
+    </div>
+</ion-content>

@@ -1,0 +1,29 @@
+<ion-content no-padding class="smoke-screen">
+    <div class="top-x-container" (tap)="closeMe()">
+        <ion-icon name="md-close"></ion-icon>
+    </div>
+    <div class="top-logo-container">
+        <img src="assets/imgs/top_logo_diagonal.jpg" />
+    </div>
+    <!--<div class="smoke-container">
+        <img src="assets/imgs/smoke_on_white.jpg" />
+    </div>-->
+
+    <div class="input-section">
+        <div class="signup-input-container">
+            <ion-item class="input-container" no-lines>
+                <ion-input type="text" maxlength="255" [(ngModel)]="loginData.email" placeholder="Email"></ion-input>
+            </ion-item>
+            <ion-item class="input-container" no-lines>
+                <ion-input type="password" maxlength="16" [(ngModel)]="loginData.password" placeholder="Password"></ion-input>
+            </ion-item>
+            <div class="common-button-new login-button" (tap)="loginClick()">
+                <div class="button-text">LOGIN</div>
+            </div>
+        </div>
+        <div class="forgot-password-container">
+            <span (tap)="forgotPasswordClick()">Forgot Password ?</span>
+        </div>
+    </div>
+
+</ion-content>

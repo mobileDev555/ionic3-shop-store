@@ -1,0 +1,5 @@
+<ion-tabs swipeBackEnabled="false" mode="md" name="homeTabs_{{currentTs}}" tabsPlacement="bottom" tabsHighlight="true" #homeTabs (ionChange)="tabChanged($event)">
+    <ion-tab swipeBackEnabled="false" [root]="tabHome" tabIcon="home"></ion-tab>
+    <ion-tab swipeBackEnabled="false" [root]="tabProfile" tabIcon="person"></ion-tab>
+    <ion-tab swipeBackEnabled="false" [root]="tabPayment" tabIcon="person"></ion-tab>
+</ion-tabs>

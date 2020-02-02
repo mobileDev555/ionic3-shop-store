@@ -1,0 +1,117 @@
+page-claim-store {
+
+    .store-info {
+        padding: 10px;
+        padding-top: 0px;
+    }
+
+    .store-info-separator {
+        display: block;
+        width: calc(100% - 20px);
+        height: 1px;
+        margin-left: 10px;
+        background-color:rgba(0,0,0,0.25);
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .store-info .store-name {
+        font-size: 1.7rem;
+        font-weight: 600;
+    }
+    
+    .store-info .store-address {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .store-info .store-phone {
+        font-size: 1.6rem;
+        margin-top: 10px;
+    }
+
+    .store-info .store-phone a {
+        text-decoration: none;
+    }
+
+    .store-info .icon {
+        color:#00df9c;
+    }
+
+    .add-image-heading {
+        color:#000000;
+        font-size: 1.75rem;
+        font-weight: 600;
+        padding-left: 20px;
+        padding-right: 10px;
+        margin-top: 15px;
+    }
+
+    .action-icon {
+        font-size: 3.0rem;
+        font-weight: bold;
+        color:color($colors,primary);
+    }
+
+    img.action-icon {
+        width: 50px;
+    }
+
+    .next-btn-container {
+        margin-top: 20px;
+    }
+
+    .claim-button {
+        margin: auto;
+    }
+
+    .package-info {
+        padding: 10px;
+        font-size: 1.6rem;
+        font-weight: 600;
+        color:#00df9c;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .package-info .upgrade-package-text {
+        text-decoration: underline;
+        color:#00b7d9;
+    }
+
+    .store-timings-heading {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .delivery-timings-heading {
+        font-weight: 600;
+        font-size: 1.5rem;
+        margin-top: 15px;
+    }
+
+    .select {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .image-container {
+        position: relative;
+        width: 100%;
+        margin-top: 25px;
+        text-align: center;
+    }
+
+    .image-container img {
+        width: 100%;
+    }
+
+    .image-container video {
+        width: 100%;
+    }
+
+    .image-container .trash-icon {
+        position:absolute;top:10px;right:10px;font-size:1.3em;
+    }
+}

@@ -1,0 +1,42 @@
+<ion-content>
+    <div class="splash-container">
+        <img src="assets/imgs/smoke_cropped.gif" class="smoke-img" />
+        <div class="black-logo-container">
+            <img src="assets/imgs/weed_logo_black.png" />
+        </div>
+        <div class="input-section">
+            <div class="controls-container" *ngIf="globals.currentUser==null">
+                <div class="common-button search-button" (tap)="searchClick()" style="width: 200px;margin: auto;">
+                    <img src="assets/imgs/btn_bg.png" />
+                    <div class="button-text">SEARCH</div>
+                </div>
+                <div class="common-button search-button" (tap)="shareClick()" style="width: 200px;margin: auto;margin-top: 10px;">
+                    <img src="assets/imgs/btn_bg.png" />
+                    <div class="button-text">SHARE</div>
+                </div>
+                <div class="clearfix"></div>
+            </div>
+            <div class="search-text-container">
+                Find a dispensory near you
+            </div>
+            <div class="forgot-password-container" *ngIf="globals.currentUser==null">
+                <span (tap)="forgotPasswordClick()">Forgot password?</span>
+            </div>
+        </div>
+        <div class="action-section" *ngIf="globals.currentUser==null">
+            <div class="action-button action-button-L">
+                <div class="common-button" (tap)="loginClick()">
+                    <img src="assets/imgs/btn_square_bg.png" />
+                    <div class="button-text">Log in</div>
+                </div>
+            </div>
+            <div class="action-button">
+                <div class="common-button" (tap)="signupClick()">
+                    <img src="assets/imgs/btn_square_bg.png" />
+                    <div class="button-text">Create Account</div>
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</ion-content>

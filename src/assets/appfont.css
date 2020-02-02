@@ -1,0 +1,8 @@
+/* cyrillic-ext */
+@font-face {
+    font-family: 'Avenir';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Avenir Light'), local('Avenir-Light'), url(../assets/fonts/avenir-light.woff) format('woff'),
+          url('../assets/fonts/Avenir-Light.ttf') format('truetype');
+}

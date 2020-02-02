@@ -1,0 +1,179 @@
+<ion-header class="gradient-header">
+    <div *ngIf="globals.currentUser!=null" class="left-icon-container" (tap)="logoutClick()">
+        <div class="left-icon">
+            <ion-icon name="ios-log-out"></ion-icon>
+        </div>
+    </div>
+    <div *ngIf="globals.currentUser==null" class="left-icon-container" (tap)="navCtrl.pop()">
+        <div class="left-icon">
+            <ion-icon name="md-arrow-back"></ion-icon>
+        </div>
+    </div>
+    <div class="header-logo">
+        <img src="assets/imgs/weed_logo.png" />
+    </div>
+    <!--<div *ngIf="globals.currentUser!=null" class="right-icon-container" (tap)="rightIconClick()">
+        <div class="right-icon">
+            <ion-icon name="md-person"></ion-icon>
+        </div>
+    </div>-->
+</ion-header>
+<ion-content no-padding has-header class="has-header">
+    <ion-segment *ngIf="showDirectionsSelector" mode="md" [(ngModel)]="directionsMode" (ionChange)="directionsModeChanged($event)">
+        <ion-segment-button value="WALKING">
+            <ion-icon name="walk"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="DRIVING">
+            <ion-icon name="car"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="BICYCLING">
+            <ion-icon name="bicycle"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="TRANSIT">
+            <ion-icon name="train"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="STREETVIEW">
+            <ion-icon name="body"></ion-icon>
+        </ion-segment-button>
+        <ion-segment-button value="CLOSE">
+            <span style="color:#FF0000;">CLOSE</span>
+        </ion-segment-button>
+    </ion-segment>
+    <div *ngIf="!showDirectionsSelector" no-padding class="switch-view-container">
+        <div class="wdw-segment-button" (tap)="viewMode='map'" [ngClass]="{'wdw-segment-button-selected': viewMode=='map'}">
+            <div class="wdw-segment-button-inner">
+                <div class="wdw-segment-button-inner-img">
+                    <img src="assets/imgs/locator.png" />
+                </div>
+                <div class="wdw-segment-button-inner-text">
+                    LOCATOR
+                </div>
+            </div>
+        </div>
+        <div class="wdw-segment-button" (tap)="viewMode='list'" [ngClass]="{'wdw-segment-button-selected': viewMode=='list'}">
+            <div class="wdw-segment-button-inner">
+                <div class="wdw-segment-button-inner-img">
+                    <img src="assets/imgs/stores.png" />
+                </div>
+                <div class="wdw-segment-button-inner-text">
+                    STORES
+                </div>
+            </div>
+        </div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="complete-container">
+        <div class="street-image-container" *ngIf="streetViewImageUrl!=''">
+            <img [src]="streetViewImageUrl" />
+        </div>
+        <div class="map-container">
+            <input type="text" id="mapSearch_{{currentTs}}" placeholder="Search" class="controls map-search-input" />
+            <div id="map_{{currentTs}}" class="gmap"></div>
+        </div>
+        <div class="list-container" *ngIf="viewMode=='list'">
+            <ion-item class="states-container">
+                <ion-label>State</ion-label>
+                <ion-select [(ngModel)]="homeData.state" (ionChange)="stateChanged()">
+                    <ion-option *ngFor="let st of states" [value]="st.state_name">{{st.state_name}}</ion-option>
+                </ion-select>
+            </ion-item>
+            <ion-list>
+                <ion-item *ngFor="let st of stores" class="single-store" no-lines>
+                    <div class="store-image-container" (tap)="storeImageClick(st)">
+                        <img [src]="st.image_url" />
+                    </div>
+                    <div class="store-info-container" (tap)="storeInfoClick(st)">
+                        <div class="store-name">
+                            {{st.store_name}}
+                            &nbsp;&nbsp;
+                            <span style="color:#656565;">{{st.distance_text}}</span>
+                        </div>
+                        <div class="store-state">
+                            <ion-icon name="pricetag"></ion-icon>
+                            {{st.state}}
+                        </div>
+                        <div class="store-state">
+                            <ion-icon name="pin"></ion-icon>
+                            {{st.store_address}}
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="store-action-buttons">
+                        <button ion-button small round class="claim-btn action-btn" (tap)="truckClick(st)" *ngIf="st.has_store_timings">
+                            <img src="assets/imgs/truck.png" />
+                        </button>
+                        <button ion-button small round class="claim-btn action-btn" (tap)="clockClick(st)" *ngIf="st.has_delivery_timings">
+                            <img src="assets/imgs/clock.png" />
+                        </button>
+                        <button ion-button small round class="claim-btn action-btn" (tap)="callStore(st)">
+                            <img src="assets/imgs/phone.png" />
+                            <!--&nbsp;&nbsp;CALL-->
+                        </button>
+                        <button ion-button small round class="claim-btn" *ngIf="st.is_claimed=='0'" (tap)="claimClick(st)">
+                            <img src="assets/imgs/key.png" />
+                            &nbsp;&nbsp;CLAIM
+                        </button>
+                        <button ion-button small round class="web-btn" (tap)="websiteClick(st)" *ngIf="st.web_url!=null && st.web_url!=''">
+                            <ion-icon name="cloudy"></ion-icon>
+                            &nbsp;&nbsp;WEBSITE
+                        </button>
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="store-action-buttons">
+                        <button ion-button small (tap)="showStoreDirection(st)">
+                            DIRECTIONS
+                        </button>
+                    </div>
+                    <div class="clearfix"></div>
+                </ion-item>    
+            </ion-list>
+        </div>
+        <div class="pin-info-container" *ngIf="showPinInfo">
+            <div class="event-logo-container">
+                <img [src]="selectedPin.image_url" *ngIf="selectedPin.image_url!=''" />
+            </div>
+            <div class="event-info-container">
+                <div class="club-name">
+                    {{selectedPin.store_name}}
+                </div>
+                <div class="last-updated">
+                    {{selectedPin.store_address}}
+                </div>
+                <div class="directions-btn-container">
+                    <button ion-button large color="primary" (tap)="callStore(selectedPin)">Call</button>
+                    &nbsp;&nbsp;
+                    <button ion-button large color="primary" (tap)="showStoreDirection(selectedPin)">Directions</button>
+                </div>
+            </div>
+            <div class="forward-arrow" (tap)="storeInfoClick(selectedPin)">
+                <ion-icon name="ios-arrow-forward"></ion-icon>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="pin-list-container" *ngIf="showListInfo">
+            <div class="single-list-store" *ngFor="let st of listStores;">
+                <div (tap)="storeImageClick(st)">
+                    <div class="store-name">
+                        {{st.store_name}}
+                        &nbsp;&nbsp;<b>{{st.distance_text}}</b>
+                    </div>
+                    <div class="store-address">
+                        {{st.store_address}}
+                    </div>
+                    <!--<div class="store-closes">
+                        Closes: 9PM
+                    </div>-->
+                </div>
+                <div class="directions-btn-container">
+                    <button ion-button large color="primary" (tap)="callStore(st)">Call</button>
+                    &nbsp;&nbsp;
+                    <button ion-button large color="primary" (tap)="showStoreDirection(st)">Directions</button>
+                </div>
+                <div class="divider"></div>
+            </div>
+        </div>
+    </div>
+</ion-content>
+<ion-footer *ngIf="globals.currentUser!=null">
+    <wheredaweed-footer selected-index="0"></wheredaweed-footer>
+</ion-footer>

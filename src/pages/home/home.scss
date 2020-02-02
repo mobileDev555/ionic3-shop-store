@@ -1,0 +1,310 @@
+page-home {
+
+    .segment-button {
+        color:#48a90a !important;
+        font-weight: 600 !important;
+    }
+
+    .segment-button.segment-activated {
+        border-color:#48a90a !important;
+        //color:#FFFFFF !important;
+    }
+
+    .switch-view-container {
+        width: 100%;
+        height: 50px;
+    }
+
+    .wdw-segment-button {
+        display: inline-block;
+        width: calc(50% - 2px);
+        height: 50px;
+        //background: linear-gradient(to right, #00b7d9 , #00df9c);
+        background-color:#FFFFFF;
+        background-color:rgba(0,0,0,0.15);
+        position: relative;
+        margin: 0;
+        padding: 0;
+    }
+
+    .wdw-segment-button.wdw-segment-button-selected {
+        background-color:transparent;
+        background: linear-gradient(to right, #00b7d9 , #00df9c) !important;
+    }
+
+    .wdw-segment-button .wdw-segment-button-inner {
+        width: 100%;
+        height: 48px;
+        background-color:#FFFFFF;
+        position: relative;
+    }
+
+    .wdw-segment-button .wdw-segment-button-inner .wdw-segment-button-inner-img {
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .wdw-segment-button .wdw-segment-button-inner .wdw-segment-button-inner-img img {
+        height: 25px;
+    }
+    
+    .wdw-segment-button .wdw-segment-button-inner .wdw-segment-button-inner-text {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        color:rgba(0,0,0,0.80);
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    .wdw-segment-button.wdw-segment-button-selected .wdw-segment-button-inner .wdw-segment-button-inner-text {
+        color:#00df9c;
+    }
+
+    .complete-container {
+        position: relative;
+        width: 100%;
+        height: calc(100% - 60px);
+    }
+
+    .complete-container .street-image-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 20px);
+        background-color:#FFFFFF;
+        z-index: 999999 !important;
+    }
+
+    .complete-container .street-image-container img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .complete-container .map-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: calc(100% - 20px);
+    }
+
+    .complete-container .map-container .gmap {
+        width: 100%;
+        height: 100%;
+    }
+
+    .map-search-input {
+        width: 80%;
+        margin-top: 15px;
+        margin-left: 10%;
+        padding: 10px;
+        font-size: 1.4rem;
+    }
+
+    .complete-container .list-container {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 999999999 !important;
+        background-color:#FFFFFF;
+    }
+
+    .list-container .single-store {
+        padding: 10px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        box-shadow: 2px 2px 4px 0px #555;
+    }
+
+    .list-container .single-store .store-image-container {
+        float: left;
+        width: 80px;
+        height: 80px;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+
+    .list-container .single-store .store-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .list-container .single-store .store-info-container {
+        float: left;
+        width: calc(100% - 90px);
+        margin-left: 10px;
+        //background-color:#343434;
+        white-space: nowrap;
+        overflow: auto;
+    }
+
+    .list-container .single-store .store-info-container .store-name {
+        font-weight: 600;
+        color:#000000;
+    }
+
+    .list-container .single-store .store-info-container .store-phone {
+        color:#000000;
+        margin-top: 3px;
+    }
+
+    .list-container .single-store .store-info-container .store-phone .icon {
+        color:#000000;
+    }
+
+    .list-container .single-store .store-info-container .store-state {
+        color:#000000;
+        margin-top: 5px;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .list-container .single-store .store-info-container .store-state .icon {
+        color:#000000;
+    }
+
+    .list-container .single-store .store-action-buttons {
+        margin-top: 10px;
+        float: right;
+    }
+
+    .states-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .states-container .label {
+        margin-left: 10px;
+    }
+
+    .button img {
+        width: 15px;
+    }
+
+    .claim-btn {
+        background-color:#FFFFFF;
+        border-color:#00b7d9;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 20px;
+        //color:#00df9c;
+        color:#000000;
+        width: 100px;
+        font-weight: 600;
+    }
+
+    .claim-btn:hover {
+        background: linear-gradient(to right, #00b7d9 , #00df9c);
+    }
+
+    .web-btn {
+        background-color:#FFFFFF;
+        border-color:#00b7d9;
+        border-width: 2px;
+        border-style: solid;
+        border-radius: 20px;
+        //color:#00df9c;
+        color:#000000;
+        font-weight: 600;
+        width: 100px;
+    }
+
+    .web-btn:hover {
+        background: linear-gradient(to right, #00b7d9 , #00df9c);
+    }
+
+    .action-btn {
+        width: 68px !important;
+    }
+
+    .action-btn img {
+        width: 20px;
+    }
+
+
+    .complete-container .pin-info-container {
+        background-color:#FFFFFF;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:#787878;
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 10px);
+        color:#000000;
+        margin-left: 5px;
+        overflow: scroll;
+        padding: 15px;
+    }
+
+    .pin-info-container .event-logo-container {
+        float:left;
+        margin-left: 15px;
+    }
+
+    .event-logo-container img {
+        height: 70px;
+    }
+
+    .pin-info-container .event-info-container {
+        float:left;
+        margin-left: 15px;
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+
+    .event-info-container .last-updated {
+        margin-top: 5px;
+    }
+
+    .pin-info-container .forward-arrow {
+        float:right;
+        font-size: 3rem;
+        margin-right: 15px;
+        margin-top: 15px;
+    }
+    
+    .directions-btn-container button {
+        height: 30px;
+        font-size: 1.2rem;
+    }
+
+    .complete-container .pin-list-container {
+        background-color:#FFFFFF;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-width: 1px;
+        border-style: solid;
+        border-color:#787878;
+        position: absolute;
+        bottom: 0;
+        width: calc(100% - 10px);
+        height: 50%;
+        color:#000000;
+        margin-left: 5px;
+        overflow: scroll;
+    }
+
+    .pin-list-container .single-list-store {
+        padding: 10px;
+    }
+
+    .pin-list-container .single-list-store .divider{
+        height: 1px;
+        background-color:#565656;
+        width: 100%;
+        margin-top: 10px;
+    }
+}
